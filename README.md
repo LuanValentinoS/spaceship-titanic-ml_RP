@@ -2,7 +2,10 @@
 
 ## 📌 Sobre o Projeto
 
-Este projeto utiliza aprendizado de máquina para prever se um passageiro foi transportado para outra dimensão durante a colisão da Spaceship Titanic com uma anomalia do espaço-tempo. Utilizamos técnicas de pré-processamento de dados e o algoritmo **k-Nearest Neighbors (k-NN)** para realizar a classificação.
+Este projeto utiliza aprendizado de máquina para prever se um passageiro foi transportado para outra dimensão durante a colisão da Spaceship Titanic com uma anomalia do espaço-tempo. Utilizamos técnicas de pré-processamento de dados e dois modelos de classificação:
+
+- **k-Nearest Neighbors (k-NN)**
+- **Rede Neural Artificial (ANN)**
 
 Esta atividade está sendo realizada pelo aluno **Luan Valentino Sampaio Marques** para a disciplina de **Reconhecimento de Padrões**, ministrada pelo professor **Tiago Buarque**.
 
@@ -56,24 +59,46 @@ pip install -r requirements.txt
 
 ### 🚀 2. Executar o Projeto
 
-Execute o script principal para treinar e avaliar o modelo:
+Execute o script principal para treinar e avaliar os modelos:
 
 ```bash
 python src/main.py
 ```
 
-## 🧠 Modelo Utilizado
+## 🧠 Modelos Utilizados
 
-O modelo escolhido para a classificação foi o **k-Nearest Neighbors (k-NN)**, que classifica os passageiros com base nas similaridades das características fornecidas. O processo inclui:
+### 🔹 k-Nearest Neighbors (k-NN)
+O modelo k-NN classifica os passageiros com base nas similaridades das características fornecidas. O processo inclui:
 
 - **Carregamento e limpeza dos dados**
 - **Tratamento de valores ausentes**
 - **Normalização dos dados numéricos**
 - **Treinamento e avaliação do modelo**
 
-### 🎯 Desempenho do Modelo
+### 🔹 Rede Neural Artificial (ANN)
+A rede neural foi desenvolvida utilizando TensorFlow e Keras. Seu processo de treinamento inclui:
 
-A acurácia atual do modelo k-NN é de aproximadamente **71.71%**.
+- **Normalização dos dados**
+- **Arquitetura com camadas densas e ReLU**
+- **Otimização com Adam e função de perda binary_crossentropy**
+- **Treinamento com validação em um conjunto de testes**
+
+## 📊 Comparação Estatística
+
+Para determinar qual modelo apresenta melhor desempenho, utilizamos métodos estatísticos como:
+
+- **Teste de hipótese** para verificar se há diferença significativa entre as acurácias.
+- **Intervalo de confiança da diferença de desempenho**.
+- **Sobreposição de intervalos de confiança** para analisar a incerteza dos resultados.
+
+## 🎯 Desempenho dos Modelos
+
+A acurácia dos modelos atuais:
+
+- **k-NN**: ~71.71%
+- **Rede Neural**: *valor exato calculado no runtime*
+
+Os resultados das comparações estatísticas indicam se a diferença entre os modelos é significativa ou não.
 
 ## 📜 Licença
 
